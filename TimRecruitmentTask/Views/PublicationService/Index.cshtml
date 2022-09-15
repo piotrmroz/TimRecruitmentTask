@@ -1,0 +1,16 @@
+﻿@model TimRecruitmentTask.Models.PublicationSearch
+
+<div class="container">
+    <div class="row">
+        <div class="search-result" style="white-space: pre-line">
+            @Model.Result
+        </div>
+    </div>
+ 
+    <div class="row">
+        @{
+            var txt = Model.SearchedWord;
+        }
+        <button id="showMoreButton" type="submit" class="btn btn-primary show-more-btn" onclick="showMore('@Model.SearchedWord')" value="@Model.Interator"> Pokaż więcej </button>
+    </div>
+</div>

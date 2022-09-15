@@ -1,0 +1,17 @@
+﻿@model TimRecruitmentTask.Models.PublicationSearch
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    
+    @using (Html.BeginForm("SearchPublication", "Home"))
+    {
+        <div class="search-form">
+            @Html.LabelFor(x => x.SearchedWord)
+            @Html.TextBoxFor(x => x.SearchedWord, new { @class = "form-control", @id = "searchTextbox"})
+        
+            <button type="submit" class="btn btn-primary"> Wyszukaj </button>
+        </div>
+    }
+</div>
